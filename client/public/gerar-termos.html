@@ -11,27 +11,69 @@
         <h1>Gerador de Termos e Condições</h1>
         <form id="terms-form">
             <label for="businessName">Nome do Negócio:</label>
-            <input type="text" id="businessName" placeholder="Digite o nome do seu negócio">
+            <input type="text" id="businessName" placeholder="Digite o nome do seu negócio" required>
 
             <label for="businessEmail">E-mail de Contato:</label>
-            <input type="email" id="businessEmail" placeholder="Digite seu e-mail">
+            <input type="email" id="businessEmail" placeholder="Digite seu e-mail" required>
 
             <label for="businessWebsite">Website do Negócio:</label>
-            <input type="text" id="businessWebsite" placeholder="Digite o website do seu negócio">
+            <input type="text" id="businessWebsite" placeholder="Digite o website do seu negócio" required>
 
             <label for="returnPolicy">Política de Devolução:</label>
-            <textarea id="returnPolicy" rows="4" placeholder="Digite sua política de devolução"></textarea>
+            <textarea id="returnPolicy" rows="4" placeholder="Digite sua política de devolução" required></textarea>
 
             <button type="button" id="generateBtn">Gerar Termos e Condições</button>
         </form>
 
-        <div id="termsResult">
+        <div id="termsResult" style="display:none;">
             <h2>Termos e Condições Gerados:</h2>
             <div id="generatedTerms"></div>
-            <button id="downloadBtn">Baixar PDF</button>
+            <button id="downloadBtn" style="display:none;">Baixar PDF</button>
         </div>
     </div>
 
-    <script src="../src/javascript/script.js"></script>
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', async () => {
+            const businessName = document.getElementById('businessName').value;
+            const businessEmail = document.getElementById('businessEmail').value;
+            const businessWebsite = document.getElementById('businessWebsite').value;
+            const returnPolicy = document.getElementById('returnPolicy').value;
+
+            try {
+                const response = await fetch('ttps://back-termos.vercel.app/api/gerar-termo', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        businessName,
+                        businessEmail,
+                        businessWebsite,
+                        returnPolicy
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao gerar os termos');
+                }
+
+                const data = await response.json();
+                document.getElementById('generatedTerms').innerText = data.terms; // Assumindo que a resposta tem uma propriedade `terms`
+                document.getElementById('termsResult').style.display = 'block';
+                document.getElementById('downloadBtn').style.display = 'block';
+
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao gerar os termos. Tente novamente mais tarde.');
+            }
+        });
+
+        // Função para baixar o PDF (se necessário)
+        document.getElementById('downloadBtn').addEventListener('click', () => {
+            // Aqui você pode implementar a lógica para baixar os termos gerados como PDF
+            // Por enquanto, apenas um placeholder
+            alert('Baixar PDF não implementado ainda.');
+        });
+    </script>
 </body>
 </html>
