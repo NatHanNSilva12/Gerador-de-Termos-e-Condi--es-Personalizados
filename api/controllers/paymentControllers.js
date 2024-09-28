@@ -21,8 +21,8 @@ exports.createCheckoutSession = async (req, res) => {
         },
         quantity: 1,
       }],
-      success_url: 'https://seu-dominio.com/sucesso', // URL de sucesso
-      cancel_url: 'https://seu-dominio.com/cancelar',  // URL de cancelamento
+      success_url: 'https://front-termos.vercel.app/sucesso', // URL de sucesso
+      cancel_url: 'https://front-termos.vercel.app/cancelar',  // URL de cancelamento
     });
 
     res.json({ id: session.id });
