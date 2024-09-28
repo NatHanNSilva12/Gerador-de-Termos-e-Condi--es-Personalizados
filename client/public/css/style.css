@@ -1,0 +1,180 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #0056b3;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff8c00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .cta-button:hover {
+    background-color: #e07b00;
+  }
+  
+  /* Planos e Preços */
+  .pricing {
+    padding: 4rem 0;
+    background-color: white;
+  }
+  
+  .pricing h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .pricing-card {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  .pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pricing-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .pricing-card ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  footer p {
+    margin-bottom: 0.5rem;
+  }
+  
+  footer .social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  footer .social li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer .social li a:hover {
+    color: #ff8c00;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .pricing-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header .container {
+      flex-direction: column;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  }
+  
