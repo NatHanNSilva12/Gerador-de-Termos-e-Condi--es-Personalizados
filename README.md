@@ -39,7 +39,7 @@ Um gerador simples de termos e condições personalizados, que permite aos usuá
 
 1. Clone este repositório para sua máquina local:
    ```bash
-   git clone https://github.com/seu-usuario/gerador-termos-condicoes.git
+   git clone https://github.com/NatHanNSilva12/Gerador-de-Termos-e-Condi--es-Personalizados.git
    cd gerador-termos-condicoes
 Instale as dependências do backend:
 
@@ -66,21 +66,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request
 
 Licença
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-markdown
-Copiar código
-
-### Como Adicionar Imagens
-
-1. **Capturas de Tela**: Substitua `path/to/your/...` pelos caminhos corretos para as imagens do seu projeto. As imagens devem estar no seu repositório (geralmente na pasta `public` ou uma pasta específica para imagens).
-
-2. **Personalização**: Adapte o texto conforme necessário, incluindo suas informações, descrição do projeto e instruções específicas que você achar necessário.
-
-### Publicar no GitHub
-
-Depois de criar o `README.md`, adicione-o ao seu repositório e faça um commit:
-
-```bash
-git add README.md
-git commit -m "Adiciona README ao projeto"
-git push origin main
