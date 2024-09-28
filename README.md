@@ -28,14 +28,12 @@ Um gerador simples de termos e condições personalizados, que permite aos usuá
 
 ## Capturas de Tela
 
-![Landing Page](path/to/your/landing-page-screenshot.png)
+![Landing Page](imagem1.png)
 *Captura de tela da landing page*
 
-![Página de Pagamento](path/to/your/payment-page-screenshot.png)
-*Captura de tela da página de pagamento*
+![Página de Termos](imagem2.png)
+*Captura de tela da página de termos*
 
-![Página de Sucesso](path/to/your/success-page-screenshot.png)
-*Captura de tela da página de sucesso*
 
 ## Instalação
 
