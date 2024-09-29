@@ -82,7 +82,7 @@
                     document.getElementById('payment-message').classList.remove('hidden');
                 } else {
                     // Envia o paymentMethod.id para o backend e cria uma sessão de pagamento
-                    fetch('ttps://back-termos.vercel.apph/create-checkout-session', {
+                    fetch('ttps://back-termos.vercel.app/create-checkout-session', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
